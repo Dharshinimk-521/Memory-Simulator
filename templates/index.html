@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Allocation Simulator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contiguous Memory Allocation Simulator</h1>
+        </header>
+
+        <form action="/results" method="POST">
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category, message in messages %}
+                  <div class="error">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="memory-blocks">Memory Blocks (KB)</label>
+                    <textarea id="memory-blocks" name="blocks" rows="3" placeholder="e.g., 100, 500, 200, 300, 600">100, 500, 200, 300, 600</textarea>
+                </div>
+                <div class="input-group">
+                    <label for="process-queue">Process Queue (KB)</label>
+                    <textarea id="process-queue" name="processes" rows="3" placeholder="e.g., 212, 417, 112, 426">212, 417, 112, 426</textarea>
+                </div>
+            </div>
+            
+            <button type="submit" id="run-button">Run Simulation</button>
+        </form>
+    </div>
+</body>
+</html>

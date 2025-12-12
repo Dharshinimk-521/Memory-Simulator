@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simulation Results</h1>
+            <a href="/" class="back-button">Run New Simulation</a>
+        </header>
+
+        <div class="output-container">
+            <div class="algorithm-column" id="first-fit">
+                <h2>First-Fit</h2>
+                <div class="metrics" id="ff-metrics"></div>
+                <div class="memory-map" id="ff-map"></div>
+                <h3>Allocations:</h3>
+                <div class="allocations" id="ff-allocations"></div>
+                <h3>Failed:</h3>
+                <div class="failed" id="ff-failed"></div>
+            </div>
+
+            <div class="algorithm-column" id="best-fit">
+                <h2>Best-Fit</h2>
+                <div class="metrics" id="bf-metrics"></div>
+                <div class="memory-map" id="bf-map"></div>
+                <h3>Allocations:</h3>
+                <div class="allocations" id="bf-allocations"></div>
+                <h3>Failed:</h3>
+                <div class="failed" id="bf-failed"></div>
+            </div>
+
+            <div class="algorithm-column" id="worst-fit">
+                <h2>Worst-Fit</h2>
+                <div class="metrics" id="wf-metrics"></div>
+                <div class="memory-map" id="wf-map"></div>
+                <h3>Allocations:</h3>
+                <div class="allocations" id="wf-allocations"></div>
+                <h3>Failed:</h3>
+                <div class="failed" id="wf-failed"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const resultsData = {{ results_data|tojson }};
+    </script>
+    
+    <script src="/static/results.js" defer></script>
+</body>
+</html>
