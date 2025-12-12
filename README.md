@@ -94,13 +94,7 @@ MEM_SIMULATOR/
    ```bash
    python app.py
    ```
-3. Open browser at:
 
-   ```
-   http://localhost:5000
-   ```
-
----
 
 ## 👩‍💻 Team Members
 
@@ -110,4 +104,4 @@ MEM_SIMULATOR/
 
 ---
 
-If you'd like, I can also generate a project logo, flow diagram, or add step‑through explanation of each algorithm.
+
